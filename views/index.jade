@@ -1,0 +1,15 @@
+extend layout
+block content
+  h1 You can send messages to the MQTT server at the following URL:
+  .card.blue-grey.darken-1.white-text
+    .card-content
+      p.card-title!= mqtt_url
+  h1 Received messages
+  ul.collection#messages
+    each item in messages
+      li.collection-item
+        p
+          span.strong Topic: #{item.topic}
+          br
+          span Value: #{item.value}
+

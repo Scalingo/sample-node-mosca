@@ -5,7 +5,11 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.16.2",
-    "mosca": "^2.5.2"
+    "jade": "^1.11.0",
+    "mongo-oplog": "^2.0.2",
+    "mongodb": "^2.2.33",
+    "mosca": "^2.5.2",
+    "ws": "^3.2.0"
   },
   "devDependencies": {},
   "scripts": {

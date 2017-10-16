@@ -4,7 +4,7 @@ var ascoltatore = {
   //using ascoltatore
   type: 'mongo',
   url: process.env.MONGO_URL || 'mongodb://localhost:27017/mqtt',
-  pubsubCollection: 'ascoltatori',
+  pubsubCollection: 'mqtt',
   mongo: {}
 };
 
@@ -21,7 +21,7 @@ server.on('clientConnected', function(client) {
 
 // fired when a message is received
 server.on('published', function(packet, client) {
-  console.log('Published', packet.payload);
+  console.log('Published topic:', packet.topic, ' payload: ', packet.payload.toString());
 });
 
 server.on('ready', setup);
