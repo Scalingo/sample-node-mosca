@@ -4,7 +4,5 @@
   "logo": "https://scalingo.com/logo.svg",
   "repository": "https://github.com/Scalingo/sample-node-mosca",
   "website": "https://scalingo.com",
-  "env": {},
-  "addons": ["scalingo-mongodb", "tcp-loadbalancer"]
-
+  "addons": ["scalingo-mongodb", "tcp-load-balancer"]
 }
