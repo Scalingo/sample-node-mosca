@@ -49,8 +49,10 @@ function startOplog(db) {
     console.log("=== open tailable cursor ===")
     collection.find({}, {tailable: true, awaitdata: true, numberOfRetries:-1})
       .each(function(err, doc){
-        wss.broadcast(JSON.stringify({topic: doc.topic, value: doc.value.toString()}))
-        console.log("New message topic: ",doc.topic, " value: ", doc.value.toString())
+        if(doc) {
+          wss.broadcast(JSON.stringify({topic: doc.topic, value: doc.value.toString()}))
+          console.log("New message topic: ",doc.topic, " value: ", doc.value.toString())
+        }
       })
   })
 }
