@@ -10,8 +10,7 @@ https://nodejs.org/en/download/
 
 ### NPM
 
-This go application is using npm to manage
-its dependencies. To install them run:
+This application uses `npm` to manage its dependencies. Install them with:
 
 ```sh
 npm install
@@ -32,7 +31,7 @@ npm run start-tcp
 Deploying on Scalingo
 ---------------------
 
-Create an application on https://scalingo.com with a MongoDB and an TCP addon, then:
+Create an application on https://scalingo.com with a MongoDB and a TCP addon, then:
 
 ```
 git remote add scalingo git@scalingo.com:<name_of_your_app>.git
@@ -43,7 +42,7 @@ scalingo -a <name_of_your_app> scale tcp:1
 
 And that's it!
 
-The application is running at this url: https://sample-node-mosca.scalingo.io/
+A sample of this application is running at: https://sample-node-mosca.scalingo.io/
 
 Deploy in one click
 -------------------
@@ -53,5 +52,5 @@ Deploy in one click
 Links
 -----
 
-http://www.mosca.io/
-https://nodejs.org/en/
+- http://www.mosca.io/
+- https://nodejs.org/en/
