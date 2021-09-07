@@ -4,5 +4,14 @@
   "logo": "https://scalingo.com/logo.svg",
   "repository": "https://github.com/Scalingo/sample-node-mosca",
   "website": "https://scalingo.com",
-  "addons": ["scalingo-mongodb", "tcp-load-balancer"]
+  "formation": {
+    "web": {
+      "amount": 1,
+      "size": "S"
+    }
+  },
+  "addons": [
+    {"plan": "mongodb:mongo-sandbox"},
+    {"plan": "tcp-gateway:tcplb"}
+  ]
 }
