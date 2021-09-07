@@ -1,8 +1,8 @@
-Sample Application with NodeJS and Mosca
-========================================
+# Sample Application with NodeJS and Mosca
 
-Running Locally
----------------
+A sample of this application is running at: https://node-mosca.is-easy-on-scalingo.com/
+
+## Running Locally
 
 First, you need to have a working NodeJS environment:
 
@@ -28,29 +28,27 @@ npm start
 npm run start-tcp
 ```
 
-Deploying on Scalingo
----------------------
+## Deploy via Git
 
-Create an application on https://scalingo.com with a MongoDB and a TCP addon, then:
+Create an application on https://scalingo.com with a MongoDB and a TCP Gateway addon, then:
 
-```
-git remote add scalingo git@scalingo.com:<name_of_your_app>.git
+```shell
+scalingo --app my-app git-setup
 git push scalingo master
+```
 
-scalingo -a <name_of_your_app> scale tcp:1
+Then scale the TCP container:
+```shell
+scalingo -a my-app scale tcp:1
 ```
 
 And that's it!
 
-A sample of this application is running at: https://sample-node-mosca.scalingo.io/
-
-Deploy in one click
--------------------
+## Deploy via One-Click
 
 [![Deploy to Scalingo](https://cdn.scalingo.com/deploy/button.svg)](https://my.scalingo.com/deploy)
 
-Links
------
+## Links
 
-- http://www.mosca.io/
+- https://www.mosca.io/
 - https://nodejs.org/en/
