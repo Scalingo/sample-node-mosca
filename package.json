@@ -8,7 +8,7 @@
     "jade": "^1.11.0",
     "mongo-oplog": "^2.0.2",
     "mongodb": "^2.2.33",
-    "mosca": "^2.5.2",
+    "mosca": "^2.8.3",
     "ws": "^3.2.0"
   },
   "devDependencies": {},
